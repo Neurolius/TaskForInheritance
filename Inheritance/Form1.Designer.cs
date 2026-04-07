@@ -28,12 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnRefill = new Button();
+            txtInfo = new RichTextBox();
+            txtOut = new RichTextBox();
+            btnGet = new Button();
+            SuspendLayout();
+            // 
+            // btnRefill
+            // 
+            btnRefill.Location = new Point(12, 12);
+            btnRefill.Name = "btnRefill";
+            btnRefill.Size = new Size(209, 25);
+            btnRefill.TabIndex = 0;
+            btnRefill.Text = "Перезаполнить";
+            btnRefill.UseVisualStyleBackColor = true;
+            // 
+            // txtInfo
+            // 
+            txtInfo.Location = new Point(12, 43);
+            txtInfo.Name = "txtInfo";
+            txtInfo.Size = new Size(209, 33);
+            txtInfo.TabIndex = 1;
+            txtInfo.Text = "";
+            // 
+            // txtOut
+            // 
+            txtOut.Location = new Point(12, 82);
+            txtOut.Name = "txtOut";
+            txtOut.Size = new Size(134, 171);
+            txtOut.TabIndex = 2;
+            txtOut.Text = "";
+            // 
+            // btnGet
+            // 
+            btnGet.Location = new Point(152, 82);
+            btnGet.Name = "btnGet";
+            btnGet.Size = new Size(69, 171);
+            btnGet.TabIndex = 3;
+            btnGet.Text = "Взять";
+            btnGet.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(458, 293);
+            Controls.Add(btnGet);
+            Controls.Add(txtOut);
+            Controls.Add(txtInfo);
+            Controls.Add(btnRefill);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnRefill;
+        private RichTextBox txtInfo;
+        private RichTextBox txtOut;
+        private Button btnGet;
     }
 }
