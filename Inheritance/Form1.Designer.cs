@@ -42,11 +42,15 @@
             btnRefill.TabIndex = 0;
             btnRefill.Text = "Перезаполнить";
             btnRefill.UseVisualStyleBackColor = true;
+            btnRefill.Click += btnRefill_Click;
             // 
             // txtInfo
             // 
+            txtInfo.BackColor = SystemColors.ActiveCaption;
+            txtInfo.BorderStyle = BorderStyle.None;
             txtInfo.Location = new Point(12, 43);
             txtInfo.Name = "txtInfo";
+            txtInfo.ReadOnly = true;
             txtInfo.Size = new Size(209, 33);
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
@@ -55,6 +59,7 @@
             // 
             txtOut.Location = new Point(12, 82);
             txtOut.Name = "txtOut";
+            txtOut.ReadOnly = true;
             txtOut.Size = new Size(134, 171);
             txtOut.TabIndex = 2;
             txtOut.Text = "";
