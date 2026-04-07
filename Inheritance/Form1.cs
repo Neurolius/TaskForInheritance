@@ -18,13 +18,13 @@ namespace Inheritance
                 switch (rnd.Next() % 3)
                 {
                     case 0:
-                        this.drinksList.Add(new Juice { Volume = rnd.Next()%10 });
+                        this.drinksList.Add(Juice.Generate());
                         break;
                     case 1:
-                        this.drinksList.Add(new Soda { Volume = rnd.Next()%10 });
+                        this.drinksList.Add(Soda.Generate());
                         break;
                     case 2:
-                        this.drinksList.Add(new Alcohol{ Volume = rnd.Next() % 10 });
+                        this.drinksList.Add(Alcohol.Generate());
                         break;
                 }
             }

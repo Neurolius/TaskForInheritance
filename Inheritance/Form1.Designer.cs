@@ -38,7 +38,7 @@
             // 
             btnRefill.Location = new Point(12, 12);
             btnRefill.Name = "btnRefill";
-            btnRefill.Size = new Size(209, 25);
+            btnRefill.Size = new Size(281, 25);
             btnRefill.TabIndex = 0;
             btnRefill.Text = "Перезаполнить";
             btnRefill.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             txtInfo.Location = new Point(12, 43);
             txtInfo.Name = "txtInfo";
             txtInfo.ReadOnly = true;
-            txtInfo.Size = new Size(209, 33);
+            txtInfo.Size = new Size(281, 33);
             txtInfo.TabIndex = 1;
             txtInfo.Text = "";
             // 
@@ -60,13 +60,13 @@
             txtOut.Location = new Point(12, 82);
             txtOut.Name = "txtOut";
             txtOut.ReadOnly = true;
-            txtOut.Size = new Size(134, 171);
+            txtOut.Size = new Size(206, 171);
             txtOut.TabIndex = 2;
             txtOut.Text = "";
             // 
             // btnGet
             // 
-            btnGet.Location = new Point(152, 82);
+            btnGet.Location = new Point(224, 82);
             btnGet.Name = "btnGet";
             btnGet.Size = new Size(69, 171);
             btnGet.TabIndex = 3;
