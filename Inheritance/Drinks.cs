@@ -9,6 +9,7 @@ namespace Inheritance
             var str = String.Format("\nОбъем: {0}", this.Volume);
             return str; 
         }
+        public static Random rnd = new Random();
     }
 
     public class Juice : Drink {
@@ -26,7 +27,6 @@ namespace Inheritance
 
         public static Juice Generate()
         {
-            var rnd = new Random();
             var Fruits = new string[] { "Яблоко", "Апельсин", "Груша", "Виноград" };
 
             return new Juice { 
@@ -52,7 +52,6 @@ namespace Inheritance
 
         public static Soda Generate()
         {
-            var rnd = new Random();
             var Types = new string[] { "Добрый кола", "Фанта", "Спрайт", "Пепси" };
             return new Soda
             {
@@ -78,7 +77,6 @@ namespace Inheritance
 
         public static Alcohol Generate()
         {
-            var rnd = new Random();
             var Types = new string[] { "Вино", "Пиво", "Водка", "Коньяк" };
             return new Alcohol
             {
