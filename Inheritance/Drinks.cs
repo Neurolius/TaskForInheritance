@@ -4,22 +4,44 @@
 namespace Inheritance
 {
     public class Drink {
-        public double volume { get; set; }
+        public double Volume;
+        public virtual string getInfo() { return "Я напиток"; }
     }
 
     public class Juice : Drink {
-        public string usingFruit { get; set; }
-        public bool hasPulp { get; set; }
+        public string UsingFruit;
+        public bool hasPulp;
+
+        public override string getInfo()
+        {
+            var str = "Я сок";
+            str += String.Format("\nОбъем: {0}", this.Volume);
+            return str;
+        }
     }
 
     public class Soda : Drink {
-        public string type { get; set; }
-        public int countBubbles { get; set; }
+        public string Type;
+        public int CountBubbles;
+
+        public override string getInfo()
+        {
+            var str = "Я газировка";
+            str += String.Format("\nОбъем: {0}", this.Volume);
+            return str;
+        }
     }
 
     public class Alcohol : Drink { 
-        public int strength { get; set; }
-        public string type { get; set; }
+        public int Strength;
+        public string Type;
+
+        public override string getInfo()
+        {
+            var str = "Я алкоголь";
+            str += String.Format("\nОбъем: {0}", this.Volume);
+            return str;
+        }
     }
     
 }

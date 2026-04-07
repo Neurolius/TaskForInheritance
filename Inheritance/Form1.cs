@@ -13,17 +13,18 @@ namespace Inheritance
         {
             this.drinksList.Clear();
             var rnd = new Random();
-            for (var i = 0; i<10; i++) {
-                switch (rnd.Next() % 3) 
+            for (var i = 0; i < 10; i++)
+            {
+                switch (rnd.Next() % 3)
                 {
-                    case 0: 
-                        this.drinksList.Add(new Juice());
+                    case 0:
+                        this.drinksList.Add(new Juice { Volume = rnd.Next()%10 });
                         break;
-                    case 1: 
-                        this.drinksList.Add(new Soda());
+                    case 1:
+                        this.drinksList.Add(new Soda { Volume = rnd.Next()%10 });
                         break;
-                    case 2: 
-                        this.drinksList.Add(new Alcohol());
+                    case 2:
+                        this.drinksList.Add(new Alcohol{ Volume = rnd.Next() % 10 });
                         break;
                 }
             }
@@ -36,18 +37,42 @@ namespace Inheritance
             int sodaCount = 0;
             int alcoholCount = 0;
 
-            foreach(var drink in this.drinksList) {
-                if(drink is Juice) {
+            foreach (var drink in this.drinksList)
+            {
+                if (drink is Juice)
+                {
                     juiceCount++;
-                } else if(drink is Soda) {
+                }
+                else if (drink is Soda)
+                {
                     sodaCount++;
-                } else if(drink is Alcohol) {
+                }
+                else if (drink is Alcohol)
+                {
                     alcoholCount++;
                 }
             }
             txtInfo.Text = "Сок\tСода\tАлко";
             txtInfo.Text += "\n";
             txtInfo.Text += String.Format("{0}\t{1}\t{2}", juiceCount, sodaCount, alcoholCount);
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            if (this.drinksList.Count == 0)
+            {
+                txtOut.Text = "Сегодня не пьешь";
+                return;
+            }
+
+            var drink = this.drinksList[0];
+            this.drinksList.RemoveAt(0);
+
+           
+            txtOut.Text = drink.getInfo();
+            
+            
+            ShowInfo();
         }
     }
 }
